@@ -1,0 +1,43 @@
+PASSO 01:
+imagem do pokemon no centro (acima do centro?) da página
+seta para a esquerda que volta para a imagem anterior
+seta para a direita que vai para a próxima imagem
+opção para escolher se a próxima imagem é aleatória ou em sequência
+mostrar uma entrada na pokedex daquele pokémon
+talvez:
+	escolher o(s) tipo(s) dos pokémon que vão aparecer
+	escolher a(s) região(ões) dos pokémon que vão aparecer
+
+PASSO 02:
+manter tudo do PASSO 01, menos as setas
+quatro botões com nomes de pokemon
+um desses botões é o nome do pokemon da imagem
+os outros três botões são aleatórios
+ao apertar o nome certo, aparecer uma mensagem dizendo que a pessoa acertou
+ao apertar o nome errado, aparecer uma mensagem dizendo que a pessoa errou
+a mensagem informando o resultado tem um botão "continuar"/"próximo"/etc.
+o botão "continuar"/"próximo"/etc vai fazer a mesma coisa que a seta para a direita
+
+PASSO 03:
+manter tudo do PASSO 02
+como criar autenticação
+como gerenciar login de usuário
+como usar google, apple, facebook, etc. para autenticação
+criar banco de dados para guardar:
+	quais pokemon já foram vistos;
+	qual o nível de memorização de cada pokemon
+	qual o próximo pokemon para estudar
+estudar como implementar repetição espaçada
+quando a pessoa acertar o pokemon, aumentar o nível (pontuação?) naquele pokemon
+quando a pessoa errar o pokemon, diminuir o nível (pontuação?) naquele pokemon
+quando a pessoa errar o pokemon, o mesmo pokemon vai aparecer depois de 4-6 pokemon
+nível mais difícil:
+	a pessoa tem que escrever o nome do pokemon
+	se errar, tentar analisar o quão perto ela chegou do nome correto
+
+PRÓXIMOS PASSOS
+estatísticas de qual geração/tipo a pessoa mais lembra
+tentar descobrir o pokemon com base na entrada na pokedex
+tocar audio do nome do pokemon, junto da resposta
+adicionar itens, habilidades, golpes, modo focado em competitivo
+
