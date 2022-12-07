@@ -1,5 +1,5 @@
 PASSO 01:
-imagem do pokemon no centro (acima do centro?) da página
+DONE imagem do pokemon no centro (acima do centro?) da página
 seta para a esquerda que volta para a imagem anterior
 seta para a direita que vai para a próxima imagem
 opção para escolher se a próxima imagem é aleatória ou em sequência

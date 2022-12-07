@@ -1,7 +1,11 @@
-html {
-	height: 100%;
+html, body {
+	margin:0;
+	padding: 0;
+	height: 100vh;
+	width: 100vw;
+
 }
-body {
+/*fechado .pokeball {
 	display: flex;
 	height: 100%;
 	margin: 0;
@@ -11,10 +15,10 @@ body {
 	align-items: center;
 	justify-content: center;
 	position:relative;
+	z-index: -1;
+} */
 
-}
-
-.big-dot {
+/*fechado .big-dot {
 	height: 120px;
 	width: 120px;
 	border-radius: 50%;
@@ -23,14 +27,41 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 1;
+	z-index: -11;
+	position:absolute;
+	margin: auto;
+}*/
+
+.pokeball {
+	display: flex;
+	height: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background: linear-gradient(#f00000 0 10%, #222224 10% 13%,#f0f0f0 13% 87%, #222224 87% 90%, #f0f0f0 90% 100%);
+	/* align-items: center;*/
+	justify-content: center;
+	position:relative;
+	z-index: -1;
+}
+
+.big-dot {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	background-color: #f0f0f0;
+	border: solid #222224 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: -11;
 	position:absolute;
 	margin: auto;
 }
 
 .small-dot {
-	height: 60px;
-	width: 60px;
+	height: 50px;
+	width: 50px;
 	border-radius: 50%;
 	background-color: #f0f0f0;
 	border: solid #222224 6px;
@@ -38,7 +69,7 @@ body {
 
 .picture {
 	display: flex;
-	align-items: center;
+	align-self: center;
 	justify-content: center;
 	z-index: 2;
 	position:absolute;
@@ -46,7 +77,27 @@ body {
 }
 
 img {
-	max-height: 500px;
+	max-height: 350px;
 	height: auto;
 	width: auto;
 }
+
+/* .arrow {
+	width: 100px;
+	height: 100px;
+	background: linear-gradient(#3bc1ec, 70%, #ecfa1f);
+	clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+	display: flex;
+	transform: rotate(90deg);
+	justify-content: center;
+	align-items: center;
+	line-height: 50px;
+}
+
+.inner-arrow {
+	width: 50px;
+	height: 50px;
+	
+	background: white;
+	clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+} */
