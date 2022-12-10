@@ -38,30 +38,32 @@ html, body {
 	margin: 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background: linear-gradient(#f00000 0 10%, #222224 10% 13%,#f0f0f0 13% 87%, #222224 87% 90%, #f0f0f0 90% 100%);
-	/* align-items: center;*/
+	background: linear-gradient(#f00000 0 8%, #222224 8% 13%,#f0f0f0 13% 87%, #222224 87% 90%, #f0f0f0 90% 100%);
+	align-items: center;
 	justify-content: center;
 	position:relative;
 	z-index: -1;
 }
 
 .big-dot {
-	height: 100px;
-	width: 100px;
+	height: 80px;
+	width: 80px;
 	border-radius: 50%;
 	background-color: #f0f0f0;
-	border: solid #222224 20px;
+	border: solid #222224 15px;
 	display: flex;
 	align-items: center;
+	align-self: flex-start;
+	justify-items: center;
 	justify-content: center;
 	z-index: -11;
 	position:absolute;
-	margin: auto;
+	margin: 10px;
 }
 
 .small-dot {
-	height: 50px;
-	width: 50px;
+	height: 35px;
+	width: 35px;
 	border-radius: 50%;
 	background-color: #f0f0f0;
 	border: solid #222224 6px;
@@ -70,34 +72,56 @@ html, body {
 .picture {
 	display: flex;
 	align-self: center;
-	justify-content: center;
+	justify-self: center;
 	z-index: 2;
 	position:absolute;
 	margin: auto;
+	/* visibility: hidden; */
 }
 
 img {
-	max-height: 350px;
+	max-height: 400px;
 	height: auto;
 	width: auto;
+	margin: 10px;
 }
 
-/* .arrow {
+.arrows {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	height: auto;
+}
+
+.arrow {
 	width: 100px;
 	height: 100px;
 	background: linear-gradient(#3bc1ec, 70%, #ecfa1f);
 	clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
 	display: flex;
-	transform: rotate(90deg);
+	/* transform: rotate(90deg); */
+	/* align-self: center; */
+	/* justify-self: center; */
+	/* position: relative; */
+	/* z-index: 99; */
+	/* margin: 1000px; */
 	justify-content: center;
 	align-items: center;
-	line-height: 50px;
 }
 
 .inner-arrow {
 	width: 50px;
 	height: 50px;
-	
-	background: white;
+	background: #f0f0f0;
 	clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-} */
+	/* align-self: center; */
+	/* justify-self: center; */
+}
+.left {
+	transform: rotate(270deg);
+}
+
+.right {
+	transform: rotate(90deg);
+}
