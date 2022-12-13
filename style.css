@@ -5,6 +5,14 @@ html, body {
 	width: 100vw;
 
 }
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	
+}
 /*fechado .pokeball {
 	display: flex;
 	height: 100%;
@@ -35,14 +43,15 @@ html, body {
 .pokeball {
 	display: flex;
 	height: 100%;
+	width: 100%;
 	margin: 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background: linear-gradient(#f00000 0 8%, #222224 8% 13%,#f0f0f0 13% 87%, #222224 87% 90%, #f0f0f0 90% 100%);
+	background: linear-gradient(#f00000 0 8%, #222224 8% 13%,#f0f0f0 13% 100%);
 	align-items: center;
 	justify-content: center;
-	position:relative;
-	z-index: -1;
+	position: fixed;
+	z-index: -999;
 }
 
 .big-dot {
@@ -69,12 +78,15 @@ html, body {
 	border: solid #222224 6px;
 }
 
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 10px;
+}
+
 .picture {
 	display: flex;
-	align-self: center;
-	justify-self: center;
-	z-index: 2;
-	position:absolute;
 	margin: auto;
 	/* visibility: hidden; */
 }
@@ -86,37 +98,29 @@ img {
 	margin: 10px;
 }
 
-.arrows {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 90%;
-	height: auto;
-}
 
+
+
+.arrow:hover {
+	cursor: pointer;
+}
 .arrow {
-	width: 100px;
-	height: 100px;
-	background: linear-gradient(#3bc1ec, 70%, #ecfa1f);
+	width: 50px;
+	height: 50px;
+	background: linear-gradient(#3bc1ec, 50%, #ecfa1f);
 	clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
 	display: flex;
-	/* transform: rotate(90deg); */
-	/* align-self: center; */
-	/* justify-self: center; */
-	/* position: relative; */
-	/* z-index: 99; */
-	/* margin: 1000px; */
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 }
 
 .inner-arrow {
-	width: 50px;
-	height: 50px;
+	width: 20px;
+	height: 20px;
 	background: #f0f0f0;
-	clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-	/* align-self: center; */
-	/* justify-self: center; */
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	position: fixed;
+	margin: 8px;
 }
 .left {
 	transform: rotate(270deg);
@@ -124,4 +128,8 @@ img {
 
 .right {
 	transform: rotate(90deg);
+}
+
+p {
+	max-width: 80%;
 }
