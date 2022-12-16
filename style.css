@@ -82,7 +82,8 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	gap: 10px;
+	gap: 20px;
+	margin-top: 80px;
 }
 
 .picture {
@@ -92,10 +93,9 @@ body {
 }
 
 img {
-	max-height: 400px;
-	height: auto;
+	height: 300px;
 	width: auto;
-	margin: 10px;
+	/* margin: 20px; */
 }
 
 
