@@ -1,26 +1,32 @@
-// async function pokename() {
-// 	const response = await fetch(`https://pokeapi.co/api/v2/pokemon/303/`);
-// 	const data = await data.json()
-// 	return pokemon.name;
+async function pokename() {
+	const response = await fetch(`https://pokeapi.co/api/v2/pokemon/303/`);
+	const data = await response.json()
+	return data;
+}
+console.log(pokename());
+let id = Math.floor(Math.random() * 152);
+
+// function pokename() {
+// 	fetch(`https://pokeapi.co/api/v2/pokemon/303/`)
+// 	.then((response) => response.json())
+// 	.then((data) => {
+// 		return(data.name.toUpperCase());
+// 	})
+
 // }
 
-
-async function pokename() {
-	fetch(`https://pokeapi.co/api/v2/pokemon/303/`)
+function pokedex() {
+	fetch(`https://pokeapi.co/api/v2/pokemon-species/303/`)
 	.then((response) => response.json())
 	.then((data) => {
-		console.log(data.name);
+		console.log(data['flavor_text_entries'][0]['flavor_text']);
 	})
+
 }
-
-console.log(await pokename());
-
-//console.log(fetchPokemon(303));
-//poke = fetchPokemon(303);
-//console.log(typeof poke);
+//console.log(pokedex());
 
 // function next() {
-// 	let id = Math.floor(Math.random() * 152);
+// 	
 // 	document.getElementById("picture").src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
 // 	pokename(id);
 // 	document.getElementById("name").innerHTML = pokename.text;
@@ -32,4 +38,6 @@ console.log(await pokename());
 // picture = "teste";
 // console.log (picture);
 
+//document.getElementById("pokename").innerHTML = pokename();
+//document.getElementById("pokedex").innerHTML = pokedex();
 
