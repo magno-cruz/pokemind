@@ -2,6 +2,7 @@ async function pokename(id) {
 	const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
 	const data = await response.json();
 	displayName(data.name.toUpperCase());
+	console.log(data.name.toUpperCase());
 }
 
 async function pokedex(id) {
@@ -42,26 +43,26 @@ function displayPokemon(nome) {
 	document.getElementById("picture").src = nome;
 }
 
-let id = '25';
-let previous = '303';
-// pokeartwork(id);
-// pokedex(id);
-// pokename(id);
-// obj(id);
+let after = '25';
+let before = [];
+
 
 function next() {
-	id = Math.floor(Math.random() * 152);
-	pokeartwork(id);
-	pokedex(id);
-	pokename(id);
-	obj(id);
-	//previous.push(id);
+	after = Math.floor(Math.random() * 152);
+	pokeartwork(after);
+	pokedex(after);
+	pokename(after);
+	// obj(after);
+	before.push(after);
 }
 
-function before() {
-	pokeartwork(previous);
-	pokedex(previous);
-	pokename(previous);
-	obj(previous);
+function previous() {
+	pokeartwork(before[before.length-2]);
+	pokedex(before[before.length-2]);
+	pokename(before[before.length-2]);
+	// obj(before[before.length-2]);
+	if (before.length > 2) {
+		before.pop();
+	}
 }
 
