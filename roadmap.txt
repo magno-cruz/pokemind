@@ -1,9 +1,10 @@
 PASSO 01:
 DONE imagem do pokemon no centro (acima do centro?) da página
-seta para a esquerda que volta para a imagem anterior
+DONE mostrar uma entrada na pokedex daquele pokémon
 seta para a direita que vai para a próxima imagem
+seta para a esquerda que volta para a imagem anterior
 opção para escolher se a próxima imagem é aleatória ou em sequência
-mostrar uma entrada na pokedex daquele pokémon
+alt da imagem é a categoria (mouse pokemon, etc.)
 talvez:
 	escolher o(s) tipo(s) dos pokémon que vão aparecer
 	escolher a(s) região(ões) dos pokémon que vão aparecer

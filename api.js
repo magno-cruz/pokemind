@@ -4,14 +4,9 @@ async function pokename(id) {
 	displayName(data.name.toUpperCase());
 }
 
-async function pokedex() {
+async function pokedex(id) {
 	const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`);
 	const data = await response.json();
-	// for(let i = 0; i < data.flavor_text_entries.length; i++) {
-	// 	if(data.flavor_text_entries[i].language.name === 'en') {
-	// 	return (data.flavor_text_entries[i].flavor_text)
-	// 	}
-	// }
 
 	let i = 0;
 	while (data.flavor_text_entries[i].language.name !== 'en'){
@@ -20,14 +15,14 @@ async function pokedex() {
 	displayPokedex(data.flavor_text_entries[i].flavor_text); 
 }
 
-async function pokeartwork() {
+async function pokeartwork(id) {
 	const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
 	const data = await response.json();
 	displayPokemon(data.sprites.other['official-artwork']['front_default']);
 }
 
 
-async function obj() {
+async function obj(id) {
 	const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`);
 	const data = await response.json();
 	console.log(data);
@@ -35,23 +30,38 @@ async function obj() {
 
 function displayName(nome) {
 	document.getElementById("pokename").innerHTML = nome;
+	document.getElementById("picture").alt = nome;
 }
 
 function displayPokedex(nome) {
 	document.getElementById("pokedex").innerHTML = nome;
+
 }
 
 function displayPokemon(nome) {
 	document.getElementById("picture").src = nome;
 }
 
-let id = "78"; //Math.floor(Math.random() * 152);
+let id = '25';
+let previous = '303';
+// pokeartwork(id);
+// pokedex(id);
+// pokename(id);
+// obj(id);
 
-pokeartwork(id);
-pokedex(id);
-pokename(id);
-obj();
+function next() {
+	id = Math.floor(Math.random() * 152);
+	pokeartwork(id);
+	pokedex(id);
+	pokename(id);
+	obj(id);
+	//previous.push(id);
+}
 
-
-
+function before() {
+	pokeartwork(previous);
+	pokedex(previous);
+	pokename(previous);
+	obj(previous);
+}
 
