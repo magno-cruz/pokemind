@@ -3,9 +3,9 @@ DONE imagem do pokemon no centro (acima do centro?) da página
 DONE mostrar uma entrada na pokedex daquele pokémon
 DONE seta para a direita que vai para a próxima imagem
 DONE seta para a esquerda que volta para a imagem anterior
-usar teclado para como setas
-formatar nome do pokemon
-formatar entrada da pokedex
+DONE usar teclado para como setas
+DONE formatar nome do pokemon
+DONE formatar entrada da pokedex
 criar cache pros próximos pokemon (after também vai ser uma lista?)
 opção para escolher se a próxima imagem é aleatória ou em sequência
 alt da imagem é a categoria (mouse pokemon, etc.)
@@ -46,3 +46,4 @@ tentar descobrir o pokemon com base na entrada na pokedex
 tocar audio do nome do pokemon, junto da resposta
 adicionar itens, habilidades, golpes, modo focado em competitivo
 
+tenho que rodar o index.html em um web server pra conseguir importar as funções (live server plugin do vs code - live server: open with live server, ou instalar LAMPP - localhost/website-folder)

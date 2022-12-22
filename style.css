@@ -133,3 +133,35 @@ img {
 p {
 	max-width: 80%;
 }
+
+#pokename {
+	color: black;
+	font-size: 24px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-weight: bolder;
+}
+#entry {
+	font-family: "Fira Sans","Trebuchet MS",Ubuntu,Helvetica,Arial sans-serif;
+	max-width: 400px;
+	border: solid 5px #f00000;
+	border-radius: 0 10px 10px 10px;
+	padding: 15px 25px;
+}
+#version {
+	background-color: #f00000;
+	margin-bottom: -16px;
+	font-family: "Fira Sans","Trebuchet MS",Ubuntu,Helvetica,Arial sans-serif;
+	font-size: 20px;
+	border-radius: 10px 10px 0 0;
+	padding: 8px 15px 3px 20px;
+	font-weight: bold;
+	color: #f0f0f0;
+	width: fit-content;
+}
+#pokedex {
+	display: flex;
+	flex-direction: column;
+}
+
