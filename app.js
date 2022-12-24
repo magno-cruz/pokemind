@@ -1,8 +1,10 @@
 async function pokename(id) {
 	const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
 	const data = await response.json();
-	displayName(data.name.toUpperCase());
+	//displayName(data.name.toUpperCase());
 	console.log(data.name.toUpperCase());
+	document.getElementById("pokename").innerHTML = data.name;
+	document.getElementById("picture").alt = data.name;
 }
 
 async function pokedex(id) {
@@ -14,13 +16,14 @@ async function pokedex(id) {
 		i = Math.floor(Math.random() * data.flavor_text_entries.length);
 	}
 	displayPokedex(data.flavor_text_entries[i].flavor_text.replaceAll(/\f/g, " "));
-	displayVersion(data.flavor_text_entries[i].version.name);
+	document.getElementById("version").innerHTML = "Pokémon " + data.flavor_text_entries[i].version.name;
 }
 
 async function pokeartwork(id) {
 	const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
 	const data = await response.json();
-	displayPokemon(data.sprites.other['official-artwork']['front_default']);
+	// displayPokemon(data.sprites.other['official-artwork']['front_default']);
+	document.getElementById("picture").src = data.sprites.other['official-artwork']['front_default'];
 }
 
 async function imgTitle(id) {
@@ -31,7 +34,7 @@ async function imgTitle(id) {
 	while (data.genera[i].language.name !== 'en'){
 		i++;
 	}
-	displayImgTitle(data.genera[i].genus);
+	document.getElementById("picture").title = data.genera[i].genus;
 }
 
 
@@ -41,27 +44,9 @@ async function obj(id) {
 	console.log(data);
 }
 
-function displayName(nome) {
-	document.getElementById("pokename").innerHTML = nome;
-	document.getElementById("picture").alt = nome;
-}
-
 function displayPokedex(nome) {
 	document.getElementById("entry").innerHTML = nome.replaceAll("POKéMON", "Pokémon");
 
-}
-
-function displayPokemon(nome) {
-	document.getElementById("picture").src = nome;
-
-}
-
-function displayImgTitle(nome) {
-	document.getElementById("picture").title = nome;
-}
-
-function displayVersion(nome) {
-	document.getElementById("version").innerHTML = "Pokémon " + nome;
 }
 
 function next() {

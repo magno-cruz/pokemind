@@ -6,12 +6,9 @@ DONE seta para a esquerda que volta para a imagem anterior
 DONE usar teclado para como setas
 DONE formatar nome do pokemon
 DONE formatar entrada da pokedex
-criar cache pros próximos pokemon (after também vai ser uma lista?)
-opção para escolher se a próxima imagem é aleatória ou em sequência
-alt da imagem é a categoria (mouse pokemon, etc.)
-talvez:
-	escolher o(s) tipo(s) dos pokémon que vão aparecer
-	escolher a(s) região(ões) dos pokémon que vão aparecer
+DONE alt da imagem é a categoria (mouse pokemon, etc.)
+carregar os próximos pokemon, pra transição ser mais rápida
+opção para escolher se a próxima imagem é aleatória ou em sequência	
 
 PASSO 02:
 manter tudo do PASSO 01, menos as setas
@@ -22,6 +19,8 @@ ao apertar o nome certo, aparecer uma mensagem dizendo que a pessoa acertou
 ao apertar o nome errado, aparecer uma mensagem dizendo que a pessoa errou
 a mensagem informando o resultado tem um botão "continuar"/"próximo"/etc.
 o botão "continuar"/"próximo"/etc vai fazer a mesma coisa que a seta para a direita
+escolher o(s) tipo(s) dos pokémon que vão aparecer
+escolher a(s) região(ões) dos pokémon que vão aparecer
 
 PASSO 03:
 manter tudo do PASSO 02
