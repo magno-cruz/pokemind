@@ -7,7 +7,8 @@ DONE usar teclado para como setas
 DONE formatar nome do pokemon
 DONE formatar entrada da pokedex
 DONE alt da imagem é a categoria (mouse pokemon, etc.)
-carregar os próximos pokemon, pra transição ser mais rápida
+IGNORED carregar os próximos pokemon, pra transição ser mais rápida
+criar efeito de transição pra imagem e pros textos.
 opção para escolher se a próxima imagem é aleatória ou em sequência	
 
 PASSO 02:
