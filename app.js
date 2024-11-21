@@ -5,13 +5,14 @@ async function pokename(id) {
 	console.log(data.name.toUpperCase());
 	document.getElementById("pokename").innerHTML = data.name;
 	document.getElementById("picture").alt = data.name;
+	document.getElementById("option1").innerHTML = data.name;
 }
 
 async function pokedex(id) {
 	const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`);
 	const data = await response.json();
 
-	let i = 0;
+	let i = 1;
 	while (data.flavor_text_entries[i].language.name !== 'en'){
 		i = Math.floor(Math.random() * data.flavor_text_entries.length);
 	}
@@ -57,6 +58,10 @@ function next() {
 	obj(after);
 	imgTitle(after);
 	before.push(after);
+	document.getElementById("options").style.display = "flex";
+	document.getElementById("pokedex").style.display = "none";
+	document.getElementById("pokename").style.visibility = "hidden";
+
 }
 
 function previous() {
@@ -68,6 +73,24 @@ function previous() {
 	if (before.length > 2) {
 		before.pop();
 	}
+}
+
+function options(number) {
+	console.log(number)
+	if ((document.getElementById(`option${number}`).innerHTML) == (document.getElementById("pokename").innerHTML)) {
+		document.getElementById("options").style.display = "none";
+		document.getElementById("pokedex").style.display = "flex";
+		document.getElementById("pokename").style.visibility = "visible";
+		document.getElementById("pokename").innerHTML = document.getElementById("pokename").innerHTML
+
+	} else {
+		document.getElementById("pokename").style.visibility = "visible";
+		document.getElementById("pokename").innerHTML = "Tente de novo";
+
+	}
+
+
+	//console.log(number)
 }
 
 let after = '25';
@@ -87,3 +110,16 @@ pokedex(after);
 pokename(after);
 obj(after);
 imgTitle(after);
+
+
+
+
+
+
+listOfOptions = ["option1", "option2", "option3", "option4"]
+function random() {
+	Math.floor(Math.random() * 4)
+	newList = []
+
+}
+
